@@ -1,0 +1,19 @@
+{
+  "name": "Neon light bulb",
+  "symbol": "",
+  "image": "0.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "0.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "E4SB2V2a4sHGPvyeRLEDrimq8Su2JVpXcCA4QYFXibpF",
+        "share": 100
+      }
+    ]
+  }
+}
