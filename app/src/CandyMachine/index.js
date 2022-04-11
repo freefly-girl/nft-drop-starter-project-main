@@ -26,6 +26,7 @@ const CandyMachine = ({ walletAddress }) => {
 
   useEffect(() => {
     getCandyMachineState();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getProvider = () => {
@@ -191,9 +192,10 @@ const CandyMachine = ({ walletAddress }) => {
       ? (await getAtaForMint(candyMachine.state.tokenMint, walletAddress.publicKey))[0]
       : walletAddress.publicKey;
   
-    const candyMachineAddress = CandyMachine.id;
+    const candyMachineAddress = candyMachine.id;
     const remainingAccounts = [];
     const signers = [mint];
+
     const cleanupInstructions = [];
     const instructions = [
       web3.SystemProgram.createAccount({
@@ -344,6 +346,7 @@ const CandyMachine = ({ walletAddress }) => {
         ),
       );
     }
+
     const metadataAddress = await getMetadata(mint.publicKey);
     const masterEdition = await getMasterEdition(mint.publicKey);
   
@@ -397,7 +400,7 @@ const CandyMachine = ({ walletAddress }) => {
       <div className="machine-container">
         <p>{`Drop Date: ${candyMachine.state.goLiveDateTimeString}`}</p>
         <p>{`Items Minted: ${candyMachine.state.itemsRedeemed} / ${candyMachine.state.itemsAvailable}`}</p>
-        <button className="cta-button mint-button" onClick={null}>
+        <button className="cta-button mint-button" onClick={mintToken}>
             Mint NFT
         </button>
       </div>
