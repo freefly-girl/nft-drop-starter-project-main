@@ -1,0 +1,19 @@
+{
+  "name": "Sunset",
+  "symbol": "",
+  "image": "6.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "6.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "E4SB2V2a4sHGPvyeRLEDrimq8Su2JVpXcCA4QYFXibpF",
+        "share": 100
+      }
+    ]
+  }
+}

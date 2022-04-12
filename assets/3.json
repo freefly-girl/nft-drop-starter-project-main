@@ -1,0 +1,19 @@
+{
+  "name": "Canyon",
+  "symbol": "",
+  "image": "3.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "3.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "E4SB2V2a4sHGPvyeRLEDrimq8Su2JVpXcCA4QYFXibpF",
+        "share": 100
+      }
+    ]
+  }
+}
