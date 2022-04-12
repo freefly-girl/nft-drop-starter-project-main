@@ -10,6 +10,9 @@ To get started with this course, clone this repo and follow these commands:
 ### What is the .vscode Folder?
 If you use VSCode to build your app, we included a list of suggested extensions that will help you build this project! Once you open this project in VSCode, you will see a popup asking if you want to download the recommended extensions :).
 
+### ~/root directory
+![](.img/root.png)
+
 ## Development
 ### 1. Deploy your NFTs to Solana's Devnet using `arweave` storage
 #### o. create `assets` folder in _~/root_ of project
@@ -38,8 +41,11 @@ Simple `.json` with creator wallet address:
 }
 ```
 
-Be sure to change certain attributes for each `.json`: `name`, `image`, `uri`.
+Be sure to change certain attributes for each __`.json`__: `name`, `image`, `uri`. <br>
 Set the `address` by your own preferences.
+
+
+![](.img/assets.png)
 
 #### a. Setting up a Solana keypair
 ```
@@ -74,10 +80,19 @@ ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts update_candy_mach
 
 ### 2. Upgrade your NFTs with IPFS
 1. Go to Pinata and create New API Key
+
+![](.img/create_api_key.png)
+
 Make sure `pinFileToIPFS` access is enabled
+
+![](.img/pin_files_to_ipfs.png)
+
 2. Copy everything from popup
+
 Need to copy `API Key`, `API Secret`, `JWT`.
+
 3. Update `config.json` file
+
 Change: `ipfs`, `ipfsInfuraProjectId`, `ipfsInfuraSecret`. <br>
 Add new attributes: `pinataJwt`, `pinataGateway`.
 ```
@@ -103,6 +118,7 @@ Add new attributes: `pinataJwt`, `pinataGateway`.
 }
 ```
 4. Upload to IPFS
+
 Delete your `.cache` folder (if exist) and run the upload command again:
 ```
 ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./assets
